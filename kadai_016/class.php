@@ -8,6 +8,10 @@ private $price;
 public function show_height(int $height) {
   $this->height = $height;
 }
+public function show_price(int $price) {
+  $this->price = $price;
+}  
+
 //コンストラクタの作成
 public function __construct(string $name, int $price) {
   $this->name = $name;
@@ -38,4 +42,8 @@ $food = new Food('potato', 250);
 print_r($food);
 $animal = new Animal('dog', 60, 5000);
 print_r($animal);
+
+//メソッドにアクセスして実行する
+$food->show_price(250);
+$animal->show_height(60);
 ?>
